@@ -2,6 +2,7 @@ let passwordLength
 let upperCase
 let lowerCase = []
 let copyButton = document.querySelector("#copyDiv")
+let copyLogo = document.querySelector("#copyLogo")
 let generateButton = document.querySelector("#generate")
 let lengthButton = document.querySelector("#checkbox1")
 let alphabetMaj = ["A","B","C","D","E","F","G","H","I","J","K","L",
@@ -132,6 +133,17 @@ generateButton.addEventListener('click', ()=>{
 
 copyButton.addEventListener("click", ()=>{
     navigator.clipboard.writeText(inputPwd.value)
+    copyButton.style.background = "aquamarine"
+    copyLogo.style.color = "black"
+})
+copyButton.addEventListener("mouseover", ()=>{
+    copyButton.style.background = "aqua"
+    copyLogo.style.color = "black"
+
+})
+copyButton.addEventListener("mouseout", ()=>{
+    copyButton.style.background = "#2923BB"
+    copyLogo.style.color = "white"
 })
 
 
