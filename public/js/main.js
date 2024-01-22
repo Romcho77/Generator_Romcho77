@@ -1,6 +1,7 @@
 let passwordLength 
 let upperCase
 let lowerCase = []
+let copyButton = document.querySelector("#copyDiv")
 let generateButton = document.querySelector("#generate")
 let lengthButton = document.querySelector("#checkbox1")
 let alphabetMaj = ["A","B","C","D","E","F","G","H","I","J","K","L",
@@ -126,6 +127,11 @@ generateButton.addEventListener('click', ()=>{
     password = password.toString().replace(/,/g, "")
     inputPwd.value = password
     password = []
+})
+
+
+copyButton.addEventListener("click", ()=>{
+    navigator.clipboard.writeText(inputPwd.value)
 })
 
 
